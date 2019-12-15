@@ -8,7 +8,6 @@ const [
 
 const navLinks = [navLinkHome, navLinkAbout, navLinkBlog, navLinkContact];
 const navBar = document.querySelector(".nav");
-const god = document.querySelector("*");
 
 navBar.style.cssText = `height: 100%; align-items: center`;
 navLinks.forEach(
@@ -104,13 +103,13 @@ images.forEach(element => {
 	});
 });
 
-window.addEventListener("load", () => {
-	images.forEach(element => {
-		element.style.transition = "all 500ms ease-in";
-		element.style.opacity = "0.8";
-		header.style.zIndex = "500";
-	});
-});
+// window.addEventListener("load", () => {
+// 	images.forEach(element => {
+// 		element.style.transition = "all 500ms ease-in";
+// 		element.style.opacity = "0.8";
+// 		header.style.zIndex = "500";
+// 	});
+// });
 
 images.forEach(element => {
 	element.addEventListener("dblclick", event => {
@@ -182,4 +181,20 @@ document.addEventListener("keydown", () => {
 
 window.addEventListener("scroll", () => {
 	console.log("scrolling!");
+});
+
+gsap.from("img", {
+	duration: 1.5,
+	opacity: 0,
+	scale: 0,
+	ease: "back",
+	stagger: 0.25
+});
+
+gsap.from("h2, p, h4, .btn", {
+	duration: 1.5,
+	opacity: 0,
+	scale: 0,
+	ease: "back",
+	stagger: 0.1
 });
