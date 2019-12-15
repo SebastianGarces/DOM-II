@@ -51,7 +51,7 @@ const changingColors = (textColor, bgColor) => {
 	footer.style.backgroundColor = bgColor;
 	footerP.style.color = textColor;
 	navLinks.forEach(element => (element.style.color = textColor));
-	element.style.backgroundColor = bgColor;
+	navLinks.forEach(element => (element.style.backgroundColor = bgColor));
 	header.style.zIndex = "500";
 };
 
